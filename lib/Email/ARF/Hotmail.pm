@@ -27,7 +27,7 @@ our @EXPORT = qw(
 	
 );
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 $VERSION = eval $VERSION;
 
 sub create_report {
@@ -67,7 +67,7 @@ Email::ARF::Hotmail - Perl extension for Hotmail Abuse reports
 
   use Email::ARF::Hotmail;
 
-  my $report = Email::ARF::Hotmail->create($message);
+  my $report = Email::ARF::Hotmail->create_report($message);
 
 =head1 DESCRIPTION
 
@@ -78,10 +78,15 @@ Email::ARF::Report objects.
 
 =head2 create_report
 
-  my $report = Email::ARF::Hotmail->create($message);
+  my $report = Email::ARF::Hotmail->create_report($message);
   
 Creates an Email::ARF::Report object or dies with an error if the message
 cannot be parsed as a hotmail abuse report.
+
+=head1 BUGS
+
+Something weird is going on with encoding of the original email. For the
+moment, you may need to decode it from quoted printable.
 
 =head1 SEE ALSO
 
