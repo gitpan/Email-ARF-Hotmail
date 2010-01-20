@@ -1,0 +1,24 @@
+--- #YAML:1.0
+name:               Email-ARF-Hotmail
+version:            0.01
+abstract:           Perl extension for Hotmail Abuse reports
+author:
+    - Michael Stevens <mstevens@etla.org
+license:            unknown
+distribution_type:  module
+configure_requires:
+    ExtUtils::MakeMaker:  0
+build_requires:
+    ExtUtils::MakeMaker:  0
+requires:
+    Email::ARF:   0.005
+    Email::MIME:  1.903
+    Test::More:   0.94
+no_index:
+    directory:
+        - t
+        - inc
+generated_by:       ExtUtils::MakeMaker version 6.54
+meta-spec:
+    url:      http://module-build.sourceforge.net/META-spec-v1.4.html
+    version:  1.4
