@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Email-ARF-Hotmail
-version:            0.03
+version:            0.04
 abstract:           Perl extension for Hotmail Abuse reports
 author:
     - Michael Stevens <mstevens@etla.org
