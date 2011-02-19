@@ -28,7 +28,7 @@ our @EXPORT = qw(
 	
 );
 
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 $VERSION = eval $VERSION;
 
 use constant HOTMAIL_SENDER => 'staff@hotmail.com';
@@ -121,7 +121,7 @@ Email::ARF::Report objects.
 =head2 create_report
 
   my $report = Email::ARF::Hotmail->create_report($message);
-  
+
 Creates an Email::ARF::Report object or dies with an error if the message
 cannot be parsed as a hotmail abuse report.
 
