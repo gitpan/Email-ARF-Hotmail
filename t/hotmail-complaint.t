@@ -22,7 +22,7 @@ my $report = Email::ARF::Hotmail->create_report($message);
 my $des = $report->description;
 chomp $des;
 
-is($des, "An email abuse report from hotmail", "description is right");
+is($des, "An email abuse report from hotmail\r", "description is right");
 is($report->field("Source-IP"), "5.6.7.8", "source IP is right");
 is($report->field("Feedback-Type"), "abuse", "feedback type is right");
 is($report->field("User-Agent"), "Email::ARF::Hotmail-conversion", "user agent is right");
