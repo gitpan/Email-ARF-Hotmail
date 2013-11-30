@@ -1,5 +1,9 @@
 Revision history for Perl extension Email::ARF::Hotmail.
 
+0.10 Sat Nov 30 17:50 2013
+
+	- Something weird going on with versioning, bumping to 0.10
+	- Reports of problems in perl 5.19.7 but this one tests fine.
 0.08 Sat Feb 19 20:27 2011
 	- Fix podchecker warnings.
 
