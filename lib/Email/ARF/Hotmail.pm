@@ -1,6 +1,6 @@
 package Email::ARF::Hotmail;
 
-use 5.008001;
+use 5.010;
 use strict;
 use warnings;
 use Email::ARF::Report;
@@ -28,7 +28,7 @@ our @EXPORT = qw(
 	
 );
 
-our $VERSION = '0.10';
+our $VERSION = '0.11';
 $VERSION = eval $VERSION;
 
 use constant HOTMAIL_SENDER => 'staff@hotmail.com';

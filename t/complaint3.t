@@ -20,7 +20,7 @@ my $message = readfile('t/corpus/hotmail2.msg');
 my $report = Email::ARF::Hotmail->create_report($message);
 
 my $des = $report->description;
-chomp $des;
+$des =~ s/\R*//g;
 
 is($des, "An email abuse report from hotmail", "description is right");
 is($report->field("Source-IP"), "3.4.5.6", "source IP is right");
