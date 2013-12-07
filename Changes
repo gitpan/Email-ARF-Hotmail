@@ -1,5 +1,8 @@
 Revision history for Perl extension Email::ARF::Hotmail.
 
+0.12 Sat Dec 07 18:03 2013
+	- Try to fix the case where the sender comes in as <staff@hotmail.com>
+
 0.11 Sat Dec 07 16:15 2013
 	- Try to fix tests on windows
 

@@ -28,7 +28,7 @@ our @EXPORT = qw(
 	
 );
 
-our $VERSION = '0.11';
+our $VERSION = '0.12';
 $VERSION = eval $VERSION;
 
 use constant HOTMAIL_SENDER => 'staff@hotmail.com';
@@ -36,7 +36,13 @@ use constant HOTMAIL_SENDER => 'staff@hotmail.com';
 sub _is_hotmail_report {
   my $parsed = shift;
   foreach my $field (('X-Original-Sender', 'Sender', 'From')) {
-	if (defined($parsed->header($field)) and $parsed->header($field) eq HOTMAIL_SENDER) {
+	my $val = $parsed->header($field);
+	if (defined $val) {
+		$val =~ s/^\<//;
+		$val =~ s/\>$//;
+	}
+
+	if (defined($val) and $val eq HOTMAIL_SENDER) {
 	  return 1;
 	}
   }
